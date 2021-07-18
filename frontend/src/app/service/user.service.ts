@@ -14,5 +14,13 @@ export class UserService {
   addUser(data : any) : Observable<any>{
     return this.http.post( this.url+'/user/add',data);
   }
+  addFile(data : any): Observable<any>{
+    return this.http.post( this.url+'/util/addfile', data);
+  }
+  getUserByEmail(email: any)
+  {
+    return this.http.get(this.url+'/user/getbyemail/'+email);
+    
+  }
 
 }

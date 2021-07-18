@@ -10,6 +10,7 @@ import{ HttpClientModule } from '@angular/common/http';
 import { AddVideoComponent } from './add-video/add-video.component';
 import { ViewVideoComponent } from './view-video/view-video.component';
 import { ManageVideoComponent } from './manage-video/manage-video.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,8 @@ import { ManageVideoComponent } from './manage-video/manage-video.component';
     AddVideoComponent,
     ViewVideoComponent,
     ManageVideoComponent,
+    
+
   ],
   imports: [
     BrowserModule,
@@ -25,6 +28,7 @@ import { ManageVideoComponent } from './manage-video/manage-video.component';
     FormsModule,
     ReactiveFormsModule ,
     HttpClientModule,
+    SweetAlert2Module.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

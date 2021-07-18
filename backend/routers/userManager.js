@@ -9,15 +9,31 @@ router.get("/home" , (req, res) => {
     res.send('request processed at home');
 
 })
-
-
 router.post("/add" , (req,res) => {
-console.log(req.body);
+    console.log(req.body);
+    
+    new Model(req.body).save()
+    .then( () => {
+        console.log('user data saved');
+        res.json({ message : 'success'});
+    })
+    .catch( (err) => {
+        console.error(err);
+        res.json(err);
+    })
+     
+    
+    
+    })
+    
 
-new Model(req.body).save()
-.then( () => {
+
+router.get("/getbyemail/:useremail" , (req,res) => {
+
+ Model.findOne({ email: req.params.useremail})
+.then( (data) => {
     console.log('user data saved');
-    res.json({ message : 'success'});
+    res.json(data);
 })
 .catch( (err) => {
     console.error(err);

@@ -2,15 +2,17 @@
     <div class="card mt-5">
         <div class="card-body">
             <form [formGroup]="videoForm" (ngSubmit)="videoSubmit()">
-                <h2 class="text-center">Registration Page</h2>
-                <label class="mt-5" >user</label>
-                <input type="text" class="form-control" formControlName="fullname">
-                <label class="mt-5">file</label>
-                <input type="email" class="form-control" formControlName="email">
+                <h2 class="text-center">Add Video</h2>
+                <!-- <label class="mt-5" >user</label>
+                <input type="text" class="form-control" formControlName="user"> -->
+                <label class="mt-5">TITLE</label>
+                <input type="text" class="form-control" formControlName="title">
+                
+                
                 <label  class="mt-5">thumbnail</label>
-                <input type="password" class="form-control" formControlName="password">
-                <label  class="mt-5">shared</label>
-                <input type="password" class="form-control" formControlName="password">
+                <input type="file" class="form-control" >
+                <label  class="mt-5">file</label>
+                <input type="file" class="form-control" >
                 
                 <button type="submit" class="mt-5 btn btn-success w-100">Submit</button>
  

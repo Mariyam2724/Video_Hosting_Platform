@@ -1,10 +1,11 @@
 <div class="card">
     <h2 class="title">Login Here</h2>
     <hr>
+    <form [formGroup]="loginform" (ngSubmit)="submitForm()">
     <label >Email</label>
-    <input class="detail" type="text">
+    <input class="detail" type="text" formControlName="email">
     <label >Password</label>
-    <input class="detail"  type="password">
+    <input class="detail"  type="password" formControlName="password">
    <span><input type="checkbox">        Remember Me  </span>
    <span style="float:right">T&C</span>
    <!-- <h4 style="color: rgba(7, 2, 2, 0.712); font-size: 15px; text-align: right;">forgot password</h4> -->
@@ -15,5 +16,5 @@
 
    <span style="float:right"><a href="#" style="color: rgb(10, 10, 10);" class="btn">Forgot Password</a></span>
     <button>submit</button>
-
+</form>
 </div>

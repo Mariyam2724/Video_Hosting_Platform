@@ -1,14 +1,10 @@
 const express = require('express');
 // const { Model } = require('mongoose');
 const router = express.Router();
-const Model= require('../models/userModel');
+const Model= require('../models/videoModel');
 
-router.get("/home" , (req, res) => {
-    console.log('request at user home');
 
-    res.send('request processed at home');
 
-})
 
 
 router.post("/add" , (req,res) => {
@@ -16,7 +12,7 @@ console.log(req.body);
 
 new Model(req.body).save()
 .then( () => {
-    console.log('user data saved');
+    console.log('video data saved');
     res.json({ message : 'success'});
 })
 .catch( (err) => {
